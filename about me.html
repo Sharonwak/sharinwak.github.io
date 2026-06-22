@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Chrissy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            padding: 0 20px;
+        }
+        /* Шапка — фон убран */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5vh 4vw;
+            /* background: rgba(...) удалён */
+        }
+        .header h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: black;
+        }
+        .main-page-btn {
+            background: #FF217A;
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: white;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 500;
+            white-space: nowrap;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .main-page-btn:hover {
+            opacity: 0.8;
+        }
+        /* Intro — фон убран */
+        .intro {
+            /* background: rgba(...) удалён */
+            padding: 4vh 4vw 6vh 4vw;
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
+        .intro img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            max-height: 55vh;
+            object-fit: cover;
+        }
+        .intro-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vh;
+            text-align: center;
+        }
+        .intro-text h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: black;
+        }
+        .intro-text p {
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.55);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .intro-text p u {
+            text-decoration: underline;
+        }
+        .personal {
+            padding: 5vh 4vw;
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            text-align: center;
+        }
+        .personal h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: black;
+        }
+        .personal > p {
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.55);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            margin-top: 2vh;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+            align-items: center;
+        }
+        .gallery-item a {
+            display: block;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .gallery-item a:hover {
+            transform: scale(1.02);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            object-fit: cover;
+            max-height: 40vh;
+        }
+        .gallery-item .caption {
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 40px;
+            }
+            .intro {
+                flex-direction: row;
+                align-items: center;
+                gap: 4vw;
+                padding: 6vh 4vw 8vh 4vw;
+            }
+            .intro img {
+                flex: 1 1 45%;
+                max-height: 60vh;
+            }
+            .intro-text {
+                flex: 1 1 45%;
+            }
+            .gallery {
+                flex-direction: row;
+                justify-content: center;
+                gap: 2vw;
+            }
+            .gallery-item {
+                flex: 1 1 30%;
+                max-width: 30%;
+            }
+            .gallery-item img {
+                max-height: 35vh;
+            }
+        }
+        @media (max-width: 480px) {
+            .intro, .personal {
+                padding: 3vh 3vw;
+            }
+            .intro-text p, .personal > p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Шапка -->
+    <div class="header">
+        <h1>About Chrissy</h1>
+        <a href="home.html" class="main-page-btn">Main page</a>
+    </div>
+
+    <!-- Introduction -->
+    <div class="intro">
+        <img src="photo_1_about.jpg" alt="Chrissy introduction" />
+        <div class="intro-text">
+            <h2>Introduction</h2>
+            <p>
+                Christine Nicole Chlapecka born April 11, 2000 is an American singer,
+                <u>TikTok</u> personality, and <u>left-wing</u> activist. She is best known as a key figure in "#BimboTok",
+                a TikTok subculture centered on reclaiming the <u>bimbo</u> stereotype and aesthetic in a
+                <u>feminist</u>, and leftist context.
+            </p>
+        </div>
+    </div>
+
+    <!-- Personal life -->
+    <div class="personal">
+        <h2>Personal life</h2>
+        <p>
+            Chrissy lives in Los Angeles with her miniature dachshund Sugar. She entered the music world with her debut single "I`m So Hot",
+            after she released her debut EP "Girlie Pop" on June 5, 2024 and she returned with her album "Christine" on November 21, 2025.
+            On June 5, 2026, the sequel to "Christine" titled "Christine: High Voltage" is released.
+        </p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="header.html">
+                    <img src="photo_dog_sugar.jpg" alt="Dog Sugar" />
+                </a>
+                      </div>
+            <div class="gallery-item">
+                <a href="portfolio.html">
+                    <img src="photo_songs.jpg" alt="Songs" />
+                </a>
+
+            </div>
+            <div class="gallery-item">
+                <a href="voltage.html">
+                    <img src="photo_new_album.jpg" alt="New album" />
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

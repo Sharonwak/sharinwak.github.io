@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music life</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 5vw;
+            background: white;
+        }
+
+        /* ===== ШАПКА ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3vh 0 1vh 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            margin-bottom: 2vh;
+        }
+
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: black;
+        }
+
+        /* РОЗОВАЯ КНОПКА (как на второй странице) */
+        .back-btn {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            font-weight: 600;
+            color: white;
+            background: #FF217A;   /* ярко-розовый */
+            padding: 0.6rem 1.8rem;
+            border-radius: 12px;    /* скругление как на второй странице */
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            opacity: 0.8;          /* эффект как на второй странице */
+        }
+
+        /* Заголовок "Music life" */
+        .title-block {
+            padding: 2vh 0 4vh 0;
+            text-align: center;
+        }
+
+        .title-block h1 {
+            font-size: clamp(2.8rem, 10vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: black;
+        }
+
+        /* Главное фото */
+        .main-image {
+            width: 100%;
+            margin-bottom: 5vh;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+        }
+
+        /* Текстовый блок – теперь всё по центру */
+        .text-block {
+            padding: 3vh 0 6vh 0;
+            text-align: center;   /* <-- центрируем весь текст */
+        }
+
+        .text-block h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 600;
+            color: black;
+            margin-bottom: 1.5vh;
+        }
+
+        .text-block p {
+            font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.55);
+            line-height: 1.7;
+            margin-bottom: 1.8vh;
+            max-width: 800px;      /* чтобы строки не были слишком широкими */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== Адаптация ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 4vw;
+            }
+            .header {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .back-btn {
+                padding: 0.5rem 1.4rem;
+                font-size: 1rem;
+            }
+            .main-image img {
+                aspect-ratio: 4 / 3;
+            }
+            .text-block p {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding-top: 2vh;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .back-btn {
+                align-self: flex-start;
+            }
+            .title-block {
+                padding: 1vh 0 2vh 0;
+            }
+            .main-image img {
+                aspect-ratio: 1 / 1;
+                border-radius: 12px;
+            }
+            .text-block {
+                padding: 2vh 0 4vh 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ШАПКА -->
+    <div class="header">
+        <h1>Songs</h1>
+        <a href="about me.html" class="back-btn">Back</a>
+    </div>
+
+    <!-- Заголовок -->
+    <div class="title-block">
+        <h1>Music life</h1>
+    </div>
+
+    <!-- Главное фото (apollo.png) -->
+    <div class="main-image">
+        <img src="apollo.png" alt="High Voltage" />
+    </div>
+
+    <!-- Текст – теперь центрирован -->
+    <div class="text-block">
+        <h2>Music</h2>
+        <p>
+            She has been involved in music since childhood. Her family was not wealthy enough, so she had to learn to sing on her own. She performed in all the school orchestras, choirs, theaters, and so on. She calls herself a "Theater Girl" and actively uses her theatrical skills on stage and in music videos, showcasing her vibrant charisma. She can play the piano and is currently learning to play the guitar.
+        </p>
+        <p>
+            Chrissy is an indie artist who creates music and tours without the help of any labels. She often jokes about having only $7 in her bank account, which makes her work much more difficult, but thanks to the support of her followers and the team she has built herself, she doesn't give up and keeps going.
+        </p>
+        <p>
+            In April 2025, she attempted to enter the rock era of her musical career due to her deep depression. After releasing 2 singles, "Cherry Do You Love Me" and "Clam Casino," she received no response, and in September, she returned with the catchy pop song "Passionfruit." She mentioned that she wrote her album "Christine" in just two weeks in August, as she had planned to release a project in 2025.
+        </p>
+        <p>
+            In one of her streams, Chrissy revealed that although she has lived in America all her life, she is of Slovak and Irish descent.
+        </p>
+    </div>
+
+</div>
+</body>
+</html>

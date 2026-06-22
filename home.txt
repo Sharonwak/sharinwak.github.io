@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrissy Chlapecka</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Crimson Text', 'DM Sans', sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 1500px;
+            width: 100%;
+            background: white;
+            padding: 0 20px;
+        }
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+        .header .logo {
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            font-weight: 600;
+            color: black;
+            font-family: 'Inter', sans-serif;
+        }
+        .header .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .header .btn {
+            background: #FF217A;
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: opacity 0.2s;
+        }
+        .header .btn:hover {
+            opacity: 0.8;
+        }
+        .main-title {
+            text-align: center;
+            font-size: clamp(3rem, 12vw, 10rem);
+            font-family: 'Crimson Text', serif;
+            font-weight: 400;
+            line-height: 1.1;
+            color: black;
+            padding: 5vh 0;
+        }
+        .phone-mockup {
+            background: #C8156E;
+            border-radius: 30px;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5vh;
+        }
+        .phone-mockup .phone {
+            background: black;
+            border-radius: 34px;
+            padding: 12px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.5);
+            width: 90%;
+            max-width: 700px;
+        }
+        .phone-mockup .phone img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            display: block;
+        }
+        section {
+            padding: 5vh 0;
+            border-top: 1px solid #E9E9E9;
+        }
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-weight: 400;
+            color: black;
+            font-size: clamp(2rem, 5vw, 3.75rem);
+            line-height: 1.1;
+            margin-bottom: 1.5vh;
+        }
+        .section-sub {
+            color: #6F6F6F;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.5;
+        }
+        .section-img {
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            display: block;
+            margin-top: 2vh;
+        }
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+            padding: 5vh 0;
+            border-top: 1px solid #E9E9E9;
+        }
+        .two-columns .col-text {
+            flex: 1 1 40%;
+        }
+        .two-columns .col-img {
+            flex: 1 1 50%;
+        }
+        .two-columns .col-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            background: rgba(0,0,0,0.06);
+            padding: 20px;
+        }
+        .two-columns .list-item {
+            display: flex;
+            gap: 30px;
+            padding: 20px 0;
+            border-top: 1px solid #E9E9E9;
+        }
+        .list-item .num {
+            color: #6F6F6F;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .list-item .desc {
+            color: black;
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .quote-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 5vh 0;
+            border-top: 1px solid #E9E9E9;
+        }
+        .quote-block .quote-img {
+            flex: 1 1 40%;
+        }
+        .quote-block .quote-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            padding: 10px;
+        }
+        .quote-block .quote-text {
+            flex: 1 1 50%;
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            line-height: 1.3;
+            color: black;
+        }
+        .quote-block .quote-author {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            color: black;
+            margin-top: 20px;
+        }
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            .two-columns {
+                flex-direction: column;
+            }
+            .quote-block {
+                flex-direction: column;
+            }
+            .phone-mockup .phone {
+                max-width: 500px;
+            }
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }
+            .header .buttons {
+                justify-content: center;
+            }
+            .main-title {
+                font-size: 3.5rem;
+            }
+            .phone-mockup .phone {
+                max-width: 320px;
+            }
+            .two-columns .col-img img {
+                padding: 10px;
+            }
+            .quote-block .quote-img img {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">Chrissy Chlapecka</div>
+        <div class="buttons">
+            <!-- Кнопка New album → voltage.html -->
+            <a href="voltage.html" class="btn">New album</a>
+            <!-- Кнопка About Chrissy → about  me.html -->
+            <a href="about me.html" class="btn">About Chrissy</a>
+        </div>
+    </header>
+
+    <!-- Главный заголовок -->
+    <h1 class="main-title">Chrissy Chlapecka</h1>
+
+    <!-- Блок с имитацией телефона (photo_1.jpg) -->
+    <div class="phone-mockup">
+        <div class="phone">
+            <img src="photo_1.jpg" alt="Chrissy on phone">
+        </div>
+    </div>
+
+    <!-- Секция Benefits (photo_2.jpg) -->
+    <section>
+        <div style="padding-right: 20%;">
+            <div style="color: white; font-size: 12px; font-family: 'Roboto Mono', monospace;">Benefits</div>
+            <h2 class="section-title">Pop-star girl just with a dream.</h2>
+            <p class="section-sub">Theater girl with strong voice and hot songs.</p>
+        </div>
+        <img src="photo_2.jpg" alt="Chrissy performance" class="section-img">
+    </section>
+
+    <!-- Секция See the Rise (andromeda.png + текст) -->
+    <div class="two-columns">
+        <div class="col-text">
+            <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">See the Rise of Pop-Star</h2>
+            <p class="section-sub">Chrissy Clapecka make a hot song about self love and how go through the hard time.</p>
+            <div class="list-item"><span class="num">01</span><span class="desc">Strong voice.</span></div>
+            <div class="list-item"><span class="num">02</span><span class="desc">Beautiful face.</span></div>
+            <div class="list-item"><span class="num">03</span><span class="desc">Have a lot of charisma.</span></div>
+            <div class="list-item"><span class="num">04</span><span class="desc">Have a lot of gorgeous pop and some rock and ballad songs</span></div>
+        </div>
+        <div class="col-img">
+            <img src="andromeda.png" alt="Andromeda">
+        </div>
+    </div>
+
+    <!-- Блок с цитатой (apollo.png) -->
+    <div class="quote-block">
+        <div class="quote-img">
+            <img src="apollo.png" alt="Apollo">
+        </div>
+        <div class="quote-text">
+            “Femininity IS power. I will never not believe this. There is strength, gentleness, artistry, and pure bravery that comes with being a feminine person and taking that to the utmost extreme. Femininity is something deeply threatening to so many people in our world, they believe acts of shame and violence towards it are acceptable because of their deep hatred and fear towards it. I feel so deeply connected to who I am when I embrace that part of me. ”
+            <div class="quote-author">Chrissy Chlapecka <span style="color: white; font-family: 'Roboto Mono', monospace; font-size: 12px;">Head of Data</span></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
